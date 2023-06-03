@@ -1,0 +1,15 @@
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\bin\Debug\net6.0\Model.deps.json
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\bin\Debug\net6.0\Model.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\bin\Debug\net6.0\Model.pdb
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\refint\Model.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.pdb
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\ref\Model.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\bin\Debug\net6.0\DataAccess.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\bin\Debug\net6.0\DataAccess.pdb
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.csproj.CopyComplete

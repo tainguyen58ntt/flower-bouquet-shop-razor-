@@ -1,0 +1,14 @@
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\bin\Debug\net6.0\DataAccess.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
