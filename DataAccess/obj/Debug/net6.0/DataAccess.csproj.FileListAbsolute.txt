@@ -12,3 +12,6 @@ D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\refin
 D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
 D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\bin\Debug\net6.0\Model.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\bin\Debug\net6.0\Model.pdb
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete

@@ -1,0 +1,97 @@
+﻿@page
+@model TaiRazorPages.Pages.Admin.Ad_Flower.ViewFlowerShopping
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    Layout = "_CustomerLayout";
+}
+
+<h1>Shopping time</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].FlowerBouquetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].UnitsInStock)
+            </th>
+            <th>
+                <span>Quantity</span>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].FlowerBouquetStatus)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].Category)
+            </th>*@
+           @* <th>
+                @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].Supplier)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.FlowerBouquetObject)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FlowerBouquetName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitsInStock)
+                </td>
+                <td>
+                    <input type="number" min="0" max="@item.UnitsInStock">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FlowerBouquetStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Supplier.SupplierId)
+                </td>
+                <td>
+                    @*<a asp-page="./Edit" asp-route-id="@item.FlowerBouquetId">Edit</a> |*@
+                  
+                    <a asp-page="/CustomerPage/AddToCart" asp-route-id="@item.FlowerBouquetId">Add To Cart</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@*<div class="form-group">
+    <label asp-for="FlowerBouquet.CategoryId" class="control-label"></label>
+    <select asp-for="FlowerBouquet.CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+    <span asp-validation-for="FlowerBouquet.CategoryId" class="text-danger"></span>
+</div>
+*@
+<p>Search by Category</p>
+<form method="post">
+<select asp-for="SelectedCategory" class="form-control">
+    <option value="">-- Select Category --</option>
+    @foreach (var category in Model.CategoryList)
+    {
+        <option value="@category.CategoryId">@category.CategoryName</option>
+    }
+</select>
+<button type="submit">Search</button>
+</form>

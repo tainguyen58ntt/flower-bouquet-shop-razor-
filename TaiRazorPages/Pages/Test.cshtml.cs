@@ -15,8 +15,7 @@ namespace TaiRazorPages.Pages
         }
         public void OnGet()
         {
-            int s  = _db.Customers.FirstOrDefault(x => x.CustomerId == 1000).CustomerId;
-            Console.WriteLine(s);
+          
 
         }
     }

@@ -10,6 +10,5 @@ D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.dll
 D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\refint\Model.dll
 D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.pdb
 D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\ref\Model.dll
-D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\bin\Debug\net6.0\DataAccess.dll
-D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\bin\Debug\net6.0\DataAccess.pdb
-D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.csproj.CopyComplete
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\bin\Debug\net6.0\Model.runtimeconfig.json
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Model\obj\Debug\net6.0\Model.genruntimeconfig.cache

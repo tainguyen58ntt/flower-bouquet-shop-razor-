@@ -1,0 +1,12 @@
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\bin\Debug\net6.0\Ultility.deps.json
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\bin\Debug\net6.0\Ultility.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\bin\Debug\net6.0\Ultility.pdb
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\Ultility.csproj.AssemblyReference.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\Ultility.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\Ultility.AssemblyInfoInputs.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\Ultility.AssemblyInfo.cs
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\Ultility.csproj.CoreCompileInputs.cache
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\Ultility.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\refint\Ultility.dll
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\Ultility.pdb
+D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\Ultility\obj\Debug\net6.0\ref\Ultility.dll

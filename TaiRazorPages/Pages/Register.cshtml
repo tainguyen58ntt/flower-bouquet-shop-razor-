@@ -1,0 +1,36 @@
+﻿@page
+@model TaiRazorPages.Pages.RegisterModel
+@{
+}
+
+
+<form  method="post">
+	<@*label asp-for="@Model.CustomerObject.CustomerId">ID:</label>
+	<input type="number" asp-for="@Model.CustomerObject.CustomerId">
+	<span asp-validation-for="@Model.CustomerObject.CustomerId"></span>*@
+	@*<br />*@
+
+	<label asp-for="@Model.CustomerObject.Email">Email:</label>
+	<input asp-for="@Model.CustomerObject.Email">
+	<span asp-validation-for="@Model.CustomerObject.Email"></span>
+	<br />
+
+	<label asp-for="@Model.CustomerObject.Password">Password:</label>
+	<input asp-for="@Model.CustomerObject.Password">
+	<span asp-validation-for="@Model.CustomerObject.Password"></span>
+	<br />
+	<label asp-for="@Model.CustomerObject.CustomerName">Name:</label>
+	<input asp-for="@Model.CustomerObject.CustomerName">
+	<br />
+
+	<label asp-for="@Model.CustomerObject.City">City:</label>
+	<input asp-for="@Model.CustomerObject.City">
+	<br />
+	
+	<label asp-for="@Model.CustomerObject.Country">Country:</label>
+	<input asp-for="@Model.CustomerObject.Country">
+	<br />
+	<label asp-for="@Model.CustomerObject.Birthday">Birth:</label>
+	<input asp-for="@Model.CustomerObject.Birthday">
+	<button type="submit" class="btn btn-primary">Register</button>
+</form>

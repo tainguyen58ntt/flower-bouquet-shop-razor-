@@ -16,6 +16,126 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Semester 7\PRN221\NguyenThanhTai_SE1605_A02\TaiRazorPages
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Customer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfQ3VzdG9tZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Customer/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfQ3VzdG9tZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Customer/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfQ3VzdG9tZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Customer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfQ3VzdG9tZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfQ3VzdG9tZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Flower/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfRmxvd2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Flower/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfRmxvd2VyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Flower/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfRmxvd2VyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Flower/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfRmxvd2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Flower/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfRmxvd2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_OrderDetail/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJEZXRhaWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_OrderDetail/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJEZXRhaWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_OrderDetail/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJEZXRhaWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_OrderDetail/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJEZXRhaWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_OrderDetail/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJEZXRhaWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Order/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Order/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Admin/Ad_Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/AddToCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXEFkZFRvQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/DetailsFlower.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXERldGFpbHNGbG93ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXEVkaXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXExvZ291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/TestAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXFRlc3RBdXRob3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/ViewFlowerShopping.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXFZpZXdGbG93ZXJTaG9wcGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/ViewOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXFZpZXdPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/ViewOrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXFZpZXdPcmRlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -24,8 +144,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Shared/_CustomerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9DdXN0b21lckxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Shared/_ValidationScriptsPartial.cshtml]
@@ -34,6 +170,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/Test.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/_ValidationSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TdW1tYXJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/_ViewImports.cshtml]

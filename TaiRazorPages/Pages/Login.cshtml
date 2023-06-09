@@ -1,0 +1,27 @@
+﻿@page "/"
+@model TaiRazorPages.Pages.LoginModel
+@{
+}
+
+<div class="validation-summary-errors">
+    <partial name="_ValidationSummary" />
+</div>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.InputLogin.Email"></label>
+        <input asp-for="@Model.InputLogin.Email" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.InputLogin.Password"></label>
+        <input asp-for="@Model.InputLogin.Password" class="form-control" />
+        
+    </div>
+    <button type="submit" class="btn btn-primary">Log in</button>
+</form>
+@if (TempData.ContainsKey("RegisterNoti"))
+{
+    <div class="alert alert-success">@TempData["RegisterNoti"]</div>
+}
+
+<a href="/Register">Register Account ?</a>

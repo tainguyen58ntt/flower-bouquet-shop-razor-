@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
 namespace Model.Models
 {
@@ -22,13 +23,21 @@ namespace Model.Models
         public virtual DbSet<Order> Orders { get; set; } = null!;
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
         public virtual DbSet<Supplier> Suppliers { get; set; } = null!;
-
+        //public IConfiguration configuration = Configua
+        string connectionString;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+                IConfigurationRoot configuration = new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json") 
+                    .Build();
+
+                string connectionString = configuration.GetConnectionString("DefaultConnect");
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-58QEGCF;Database=FUFlowerBouquetManagement;Trusted_Connection=True;Encrypt=False");
+                //optionsBuilder.UseSqlServer("Server=DESKTOP-58QEGCF;Database=FUFlowerBouquetManagement;Trusted_Connection=True;Encrypt=False");
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Model.Models
 {
@@ -15,6 +16,8 @@ namespace Model.Models
         public string CustomerName { get; set; } = null!;
         public string City { get; set; } = null!;
         public string Country { get; set; } = null!;
+        
+
         public string Password { get; set; } = null!;
         public DateTime? Birthday { get; set; }
 

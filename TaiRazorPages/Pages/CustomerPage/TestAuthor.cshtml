@@ -1,0 +1,22 @@
+﻿@page
+@model TaiRazorPages.Pages.CustomerPage.TestAuthorModel
+@{
+}
+
+
+@{
+	var cusID = HttpContext.Session.GetInt32("CustomerId");
+
+	if (cusID != null)
+    {
+        // Display some content for the logged in customer
+        <h1>Welcome,!</h1>
+        <p>You are logged in by session.</p>
+    }
+    else
+    {
+        // Redirect to the login page if not logged in
+        Response.Redirect("./Login");
+    }
+
+}

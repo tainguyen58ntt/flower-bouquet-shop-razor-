@@ -1,0 +1,52 @@
+﻿@page
+@model TaiRazorPages.Pages.CustomerPage.IndexModel
+@*@{
+    Layout = "/Shared/_CustomerLayout.cshtml";
+}
+*@
+@{
+    Layout = "_CustomerLayout";
+}
+
+
+
+<form asp-page="Customer" asp-route-id="@Model.CustomerObject.Email" method="post">
+    <div class="form-group">
+        <label asp-for="@Model.CustomerObject.Email">Email:</label>
+        <input readonly asp-for="@Model.CustomerObject.Email" class="form-control" />
+        @*<span asp-validation-for="Email" class="text-danger"></span>*@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.CustomerObject.CustomerName">Customer Name:</label>
+        <input readonly asp-for="@Model.CustomerObject.CustomerName" class="form-control" />
+        @*<span asp-validation-for="CustomerName" class="text-danger"></span>*@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.CustomerObject.City">City:</label>
+        <input readonly asp-for="@Model.CustomerObject.City" class="form-control" />
+        @*<span asp-validation-for="City" class="text-danger"></span>*@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.CustomerObject.Country">Country:</label>
+        <input readonly asp-for="@Model.CustomerObject.Country" class="form-control" />
+        @*<span asp-validation-for="Country" class="text-danger"></span>*@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.CustomerObject.Password">Password:</label>
+        <input type="password" readonly asp-for="@Model.CustomerObject.Password" class="form-control" />
+        @*<span asp-validation-for="Password" class="text-danger"></span>*@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.CustomerObject.Birthday">Birthday:</label>
+        <input readonly asp-for="@Model.CustomerObject.Birthday" class="form-control" />
+        @*<span asp-validation-for="Birthday" class="text-danger"></span>*@
+    </div>
+
+    
+</form>
+
