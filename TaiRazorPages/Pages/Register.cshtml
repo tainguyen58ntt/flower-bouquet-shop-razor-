@@ -3,7 +3,12 @@
 @{
 }
 
-
+@if (!string.IsNullOrEmpty(ViewData["ErrorEmail"] as string))
+{
+	<div class="alert alert-danger">
+		@ViewData["ErrorEmail"]
+	</div>
+}
 <form  method="post">
 	<@*label asp-for="@Model.CustomerObject.CustomerId">ID:</label>
 	<input type="number" asp-for="@Model.CustomerObject.CustomerId">

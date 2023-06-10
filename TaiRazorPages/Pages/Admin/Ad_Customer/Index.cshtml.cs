@@ -28,11 +28,24 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
         //public IList<Customer> Customer { get;set; } = default!;
         public List<Customer> Customer { get; set; }
 
-        public void OnGet()
+        //public void OnGet()
+        //{
+
+        //    Customer = customerRepository.GetCustomer();
+
+
+        //}
+        public IActionResult OnGet()
         {
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
 
+                HttpContext.Session.SetString("ReturnUrl", "/Admin/Ad_Customer/Index");
+                return RedirectToPage("/Login");
+            }
+            //cusiD = (int)HttpContext.Session.GetInt32("CustomerId");
             Customer = customerRepository.GetCustomer();
-
+            return Page();
 
         }
     }

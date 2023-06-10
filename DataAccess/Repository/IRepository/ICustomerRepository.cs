@@ -26,5 +26,6 @@ namespace ClassLibrary.Repository
         Customer GetCustomerById(int? id);
 
         void DeleteCustomer(Customer customer);
+        bool CheckDuplicateEmail(string email);
     }
 }

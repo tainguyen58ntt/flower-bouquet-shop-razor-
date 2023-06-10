@@ -26,19 +26,23 @@
             <th>
                 @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].UnitsInStock)
             </th>
-            <th>
+         @*   <th>
                 <span>Quantity</span>
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].FlowerBouquetStatus)
             </th>
-           @* <th>
+            <th>
                 @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].Category)
-            </th>*@
+            </th>
            @* <th>
                 @Html.DisplayNameFor(model => model.FlowerBouquetObject[0].Supplier)
             </th>*@
-            <th></th>
+           @* <th></th>*@
+
+            <th>
+                Action  
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -57,23 +61,25 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.UnitsInStock)
                 </td>
-                <td>
+           @*     <td>
                     <input type="number" min="0" max="@item.UnitsInStock">
-                </td>
+                </td>*@
                 <td>
                     @Html.DisplayFor(modelItem => item.FlowerBouquetStatus)
                 </td>
-                <td>
+               @* <td>
                     @Html.DisplayFor(modelItem => item.Category.CategoryName)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Supplier.SupplierId)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
                 </td>
                 <td>
-                    @*<a asp-page="./Edit" asp-route-id="@item.FlowerBouquetId">Edit</a> |*@
-                  
-                    <a asp-page="/CustomerPage/AddToCart" asp-route-id="@item.FlowerBouquetId">Add To Cart</a>
+                <a asp-page="cart" asp-page-handler="buynow" asp-route-id="@item.FlowerBouquetId">Buy Now</a>
                 </td>
+
             </tr>
         }
     </tbody>

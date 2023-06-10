@@ -27,15 +27,29 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
 
         public IList<FlowerBouquet> FlowerBouquet { get;set; } = default!;
 
-        public async Task OnGetAsync()
+        //public async Task OnGetAsync()
+        //{
+        //    //if (_context.FlowerBouquets != null)
+        //    //{
+        //    //    FlowerBouquet = await _context.FlowerBouquets
+        //    //    .Include(f => f.Category)
+        //    //    .Include(f => f.Supplier).ToListAsync();
+        //    //}
+        //    FlowerBouquet = flowerRepository.GetFlowerBouquetsByStatus();
+        //}
+
+        public IActionResult OnGet()
         {
-            //if (_context.FlowerBouquets != null)
-            //{
-            //    FlowerBouquet = await _context.FlowerBouquets
-            //    .Include(f => f.Category)
-            //    .Include(f => f.Supplier).ToListAsync();
-            //}
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+
+                HttpContext.Session.SetString("ReturnUrl", "/Admin/Ad_Flower/Index");
+                return RedirectToPage("/Login");
+            }
+            //cusiD = (int)HttpContext.Session.GetInt32("CustomerId");
             FlowerBouquet = flowerRepository.GetFlowerBouquetsByStatus();
+            return Page();
+
         }
     }
 }

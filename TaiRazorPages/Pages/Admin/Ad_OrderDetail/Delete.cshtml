@@ -47,7 +47,7 @@
     <form method="post">
         <input type="hidden" asp-for="OrderDetail.OrderId" />
         <input type="hidden" asp-for="OrderDetail.FlowerBouquetId" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input onclick="return confirm('Are you sure you want to delete this ?')" type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-page="./Index">Back to List</a>
     </form>
 </div>

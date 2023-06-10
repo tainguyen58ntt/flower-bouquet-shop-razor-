@@ -26,20 +26,34 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null)
+            
+            if (HttpContext.Session.GetString("AdminEmail") == null)
             {
-                return NotFound();
+
+                HttpContext.Session.SetString("ReturnUrl", $"/Admin/Ad_Customer/Edit?id={id}");
+                return RedirectToPage("/Login");
+            }
+            else
+            {
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                //var customer =  await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
+                var customer = customerRepository.GetCustomerById(id);
+                if (customer == null)
+                {
+                    return NotFound();
+                }
+                Customer = customer;
+                return Page();
             }
 
-            //var customer =  await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
-            var customer = customerRepository.GetCustomerById(id);
-            if (customer == null)
-            {
-                return NotFound();
-            }
-            Customer = customer;
-            return Page();
         }
+
+
+    
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.

@@ -23,5 +23,7 @@ namespace ClassLibrary1.Repository
         void Update(OrderDetail orderDetail);
         void InsertOrderDetail(OrderDetail orderDetail);
         decimal GetTotalSumOrderDetail(int _orderId);
+
+        bool CheckDeleteFlowerInOrderDetail(int flowerId);  
     }
 }

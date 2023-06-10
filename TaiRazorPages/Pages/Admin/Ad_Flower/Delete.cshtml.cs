@@ -14,6 +14,7 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
     {
         //private readonly Model.Models.FUFlowerBouquetManagementContext _context;
         private IFlowerRepository flowerRepository;
+        private IOrderDetailRepository orderDetailRepository;   
 
         //public DeleteModel(Model.Models.FUFlowerBouquetManagementContext context)
         //{
@@ -22,6 +23,7 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
         public DeleteModel()
         {
             flowerRepository = new FlowerRepository();
+            orderDetailRepository= new OrderDetailRepository(); 
         }
 
         [BindProperty]
@@ -29,7 +31,16 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null)
+
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+
+                HttpContext.Session.SetString("ReturnUrl", $"/Admin/Ad_Flower/Delete?id={id}");
+                return RedirectToPage("/Login");
+            }
+            else
+            {
+                     if (id == null)
             {
                 return NotFound();
             }
@@ -46,9 +57,11 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
                 FlowerBouquet = flowerbouquet;
             }
             return Page();
+            }
+       
         }
 
-        public async Task<IActionResult> OnPostAsync(int? id)
+        public async Task<IActionResult> OnPostAsync(int id)
         {
             if (id == null)
             {
@@ -60,9 +73,12 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
             if (flowerbouquet != null)
             {
                 FlowerBouquet = flowerbouquet;
-                //_context.FlowerBouquets.Remove(FlowerBouquet);
-                //await _context.SaveChangesAsync();
+           
+
                 flowerRepository.DeleteFlower(FlowerBouquet);
+                
+                // check in orderdetail or not
+
             }
 
             return RedirectToPage("./Index");

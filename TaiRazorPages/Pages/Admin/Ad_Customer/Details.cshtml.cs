@@ -24,26 +24,66 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
             customerRepository = new CustomerRepository();  
         }
 
-      public Customer Customer { get; set; } = default!; 
+      public Customer Customer { get; set; } = default!;
 
+        //public async Task<IActionResult> OnGetAsync(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    //var customer = await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
+        //    var customer = customerRepository.GetCustomerById(id);  
+        //    if (customer == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    else 
+        //    {
+        //        Customer = customer;
+        //    }
+        //    return Page();
+        //}
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null)
+            //if (id == null)
+            //{
+            //    return NotFound();
+            //}
+
+            ////var customer =  await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
+            //var customer = customerRepository.GetCustomerById(id);
+            //if (customer == null)
+            //{
+            //    return NotFound();
+            //}
+            //Customer = customer;
+            //return Page();
+
+            if (HttpContext.Session.GetString("AdminEmail") == null)
             {
-                return NotFound();
+
+                HttpContext.Session.SetString("ReturnUrl", $"/Admin/Ad_Customer/Details?id={id}");
+                return RedirectToPage("/Login");
+            }
+            else
+            {
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                //var customer =  await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
+                var customer = customerRepository.GetCustomerById(id);
+                if (customer == null)
+                {
+                    return NotFound();
+                }
+                Customer = customer;
+                return Page();
             }
 
-            //var customer = await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
-            var customer = customerRepository.GetCustomerById(id);  
-            if (customer == null)
-            {
-                return NotFound();
-            }
-            else 
-            {
-                Customer = customer;
-            }
-            return Page();
         }
     }
 }

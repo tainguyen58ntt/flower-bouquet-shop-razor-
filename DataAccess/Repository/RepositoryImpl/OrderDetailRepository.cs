@@ -38,6 +38,10 @@ namespace ClassLibrary1.Repository
             //List<OrderDetail> orderDetails = OrderDetailManagement.Instance.GetOrderDetailByOderId(orderDetail.OrderId);
             return rs = OrderDetailManagement.Instance.GetTotalBy(_orderId);
         }
+        public bool CheckDeleteFlowerInOrderDetail(int flowerId)
+        {
+            return OrderDetailManagement.Instance.CheckFlowerInOrderDetail(flowerId);
+        }
 
         public void InsertOrderDetail(OrderDetail orderDetail)
         {

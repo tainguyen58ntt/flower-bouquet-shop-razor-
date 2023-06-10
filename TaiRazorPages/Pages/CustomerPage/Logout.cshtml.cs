@@ -12,6 +12,7 @@ namespace TaiRazorPages.Pages.CustomerPage
         {
             Console.WriteLine(HttpContext.Session.GetString("CustomerId"));
             HttpContext.Session.Remove("CustomerId");
+            HttpContext.Session.Remove("cart");
             Console.WriteLine(HttpContext.Session.GetString("CustomerId"));
             return RedirectToPage("/Login");
         }

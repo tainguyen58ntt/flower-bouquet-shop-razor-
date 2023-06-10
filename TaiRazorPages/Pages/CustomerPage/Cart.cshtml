@@ -1,0 +1,63 @@
+﻿@page
+@model TaiRazorPages.Pages.CustomerPage.CartModel
+@{
+}
+
+@{
+    Layout = "_CustomerLayout";
+}
+<h3>Cart</h3>
+<form method="post" asp-page="cart" asp-page-handler="update">
+    <table border="1">
+        <tr>
+            <th>Action</th>
+            <th>Id</th>
+            <th>Name</th>
+          
+            <th>Price</th>
+            <th>Quantity <input type="submit" value="Update" /></th>
+            <th>Sub Total</th>
+        </tr>
+
+        @if (Model.cart != null && Model.cart.Any())
+        {
+            
+        @foreach (var item in Model.cart)
+        {
+            <tr align="center">
+                <td align="center">
+                    <a asp-page="cart" asp-page-handler="delete" asp-route-id="@item.FlowerBouquet.FlowerBouquetId">X</a>
+                </td>
+                <td>@item.FlowerBouquet.FlowerBouquetId</td>
+                <td>@item.FlowerBouquet.FlowerBouquetName</td>
+              @*  <td><img src="~/images/@item.Product.Photo" width="120" height="100" /></td>*@
+                <td>$@item.FlowerBouquet.UnitPrice</td>
+                <td><input type="number" name="quantities" value="@item.Quantity" min="1" max="@item.FlowerBouquet.UnitsInStock" style="width: 50px;" /></td>
+                <td>
+                    $@(item.FlowerBouquet.UnitPrice * item.Quantity)
+                </td>
+                </tr>
+            }
+
+        }
+        else
+        {
+            <tr>
+                <td colspan="6">No items in the cart.</td>
+            </tr>
+        }
+        {
+        <tr>
+            <td colspan="6" align="right">Total</td>
+            <td align="center">$@Model.Total</td>
+        </tr>
+    </table>
+</form>
+<a asp-page="ViewFlowerShopping">Continue Shopping</a>
+@*@if (Model.cart.Any())
+{
+    
+}*@
+
+
+<a asp-page="CheckoutOrder" asp-route-cart="Model.cart" asp-route-total="@Model.Total">Check out</a>

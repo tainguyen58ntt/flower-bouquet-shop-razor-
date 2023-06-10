@@ -8,7 +8,13 @@
     Layout = "_CustomerLayout";
 }
 
-
+@{
+    var message = TempData["Checkout"] as string;
+    if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert alert-success">@message</div>
+    }
+}
 
 <form asp-page="Customer" asp-route-id="@Model.CustomerObject.Email" method="post">
     <div class="form-group">

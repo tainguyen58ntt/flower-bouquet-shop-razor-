@@ -169,35 +169,19 @@ namespace ClassLibrary1.DataAccess
                 var myStockDB = new FUFlowerBouquetManagementContext();
                 orderDetailList = myStockDB.OrderDetails.ToList();
                 List<OrderDetail> orderDetailCheck = orderDetailList.Where(c => c.FlowerBouquetId == flId).ToList();
-                if (orderDetailCheck != null)
+                if (orderDetailCheck.Count != 0)
                 {
-                    return true;
+                    return false;
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            return false;
+            return true;
         }
 
-        // check flower have orderdetail
-
-        //    public Customer GetByEmailAndPass(string email, string password)
-        //    {
-        //        Customer customer = null;
-        //        try
-        //        {
-        //            var myStockDB = new FUFlowerBouquetManagementContext();
-        //            customer = myStockDB.Customers.SingleOrDefault(cus => cus.Email == email && cus.Password == password);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            throw new Exception(ex.Message);
-        //        }
-        //        return customer;
-        //    }
-        //    ///
+    
         public FlowerBouquet GetByID(int flId)
         {
             FlowerBouquet flowerBouquet = null;
@@ -217,29 +201,6 @@ namespace ClassLibrary1.DataAccess
       
 
 
-        //    public void Update(Customer customer)
-        //    {
-        //        try
-        //        {
-        //            Customer c = GetByID(customer.CustomerId);
-        //            if (c != null)
-        //            {
-        //                var myStockDB = new FUFlowerBouquetManagementContext();
-        //                myStockDB.Entry<Customer>(customer).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-        //                myStockDB.SaveChanges();
-        //            }
-        //            else
-        //            {
-        //                throw new Exception("The customer does not already exist");
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            throw new Exception(ex.Message);
-        //        }
-        //    }
-
-        //    //}
         public bool Remmove(FlowerBouquet flowerBouquet)
         {
             try
@@ -248,8 +209,10 @@ namespace ClassLibrary1.DataAccess
                 if (flower != null)
                 {
                     var myStockDB = new FUFlowerBouquetManagementContext();
-                    if (!checkFlowerInOrderDetail(flowerBouquet.FlowerBouquetId))
+                    if (checkFlowerInOrderDetail(flowerBouquet.FlowerBouquetId))
                     {
+
+
                         myStockDB.FlowerBouquets.Remove(flowerBouquet);
                         myStockDB.SaveChanges();
                         return true;
@@ -261,6 +224,7 @@ namespace ClassLibrary1.DataAccess
                         myStockDB.FlowerBouquets.Update(flowerBouquet);
                         myStockDB.SaveChanges();
                         return false;
+                       
                     }
                 }
                 else

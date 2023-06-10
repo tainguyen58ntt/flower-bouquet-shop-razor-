@@ -45,6 +45,25 @@ namespace ClassLibrary1.DataAccess
             }
             return orderDetails;
         }
+
+        public bool CheckFlowerInOrderDetail(int flowerID)
+        {
+            OrderDetail orderDetails;
+            try
+            {
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                orderDetails = myStockDB.OrderDetails.FirstOrDefault(o => o.FlowerBouquetId == flowerID);
+                if(orderDetails != null)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return false;
+        }
         public List<OrderDetail> GetOrdersDetail()
         {
             List<OrderDetail> orderDetails;

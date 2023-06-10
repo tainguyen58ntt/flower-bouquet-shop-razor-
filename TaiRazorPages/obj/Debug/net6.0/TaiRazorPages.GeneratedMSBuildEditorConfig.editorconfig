@@ -100,8 +100,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRfT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/AddToCart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXEFkZFRvQ2FydC5jc2h0bWw=
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXENhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/CheckoutOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlXENoZWNrb3V0T3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Semester 7/PRN221/NguyenThanhTai_SE1605_A02/TaiRazorPages/Pages/CustomerPage/DetailsFlower.cshtml]

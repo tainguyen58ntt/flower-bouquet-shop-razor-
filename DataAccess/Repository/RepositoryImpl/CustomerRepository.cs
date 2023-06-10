@@ -14,9 +14,12 @@ namespace ClassLibrary.Repository
         
 
     {
+        public bool CheckDuplicateEmail(string email)
+        {
+			return CustomerManagement.Instance.GetCustomerByEmail(email) != null;
+        }
 
-
-		public Customer CheckLogin(string name, string password)
+        public Customer CheckLogin(string name, string password)
 		{
 			return CustomerManagement.Instance.GetByEmailAndPass(name, password);
 		}

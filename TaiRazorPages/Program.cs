@@ -1,13 +1,17 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Model.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
-builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession(option =>
+{
+	option.IdleTimeout = TimeSpan.FromMinutes(1);
+});
 
 
 var app = builder.Build();

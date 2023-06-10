@@ -26,8 +26,18 @@ namespace TaiRazorPages.Pages
         {
             if(ModelState.IsValid)
             {
-                CustomerObject.CustomerId = Ultility.Class1.GenerateUniqueId(); 
-				CustomerRepository.InsertCustomer(CustomerObject);
+                bool checkEmailExists = CustomerRepository.CheckDuplicateEmail(CustomerObject.Email);
+                if(!checkEmailExists)
+                {
+                    CustomerObject.CustomerId = Ultility.Class1.GenerateUniqueId();
+                    CustomerRepository.InsertCustomer(CustomerObject);
+                }
+                else
+                {
+                    ViewData["ErrorEmail"] = "Email already exists. Please choose a different email.";
+                    return Page();
+                }
+          
                 
                 TempData["RegisterNoti"] = "Register Success";
 

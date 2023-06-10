@@ -24,9 +24,22 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
             customerRepository = new CustomerRepository();
         }
 
+        //public IActionResult OnGet()
+        //{
+        //    return Page();
+        //}
         public IActionResult OnGet()
         {
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+
+                HttpContext.Session.SetString("ReturnUrl", "/Admin/Ad_Customer/Create");
+                return RedirectToPage("/Login");
+            }
+            //cusiD = (int)HttpContext.Session.GetInt32("CustomerId");
+            //Customer = customerRepository.GetCustomer();
             return Page();
+
         }
 
         [BindProperty]
@@ -38,8 +51,21 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
         {
           if (ModelState.IsValid )
             {
-                Customer.CustomerId = Ultility.Class1.GenerateUniqueId();
-                customerRepository.InsertCustomer(Customer);
+                //check duplicate email
+                bool checkEmailExists = customerRepository.CheckDuplicateEmail(Customer.Email);
+                if(!checkEmailExists)
+                {
+                  
+                    Customer.CustomerId = Ultility.Class1.GenerateUniqueId();
+                    customerRepository.InsertCustomer(Customer);
+                }
+                else
+                {
+                    // Duplicate email exists
+                    ViewData["ErrorEmail"] = "Email already exists. Please choose a different email.";
+                    return Page();
+                }
+            
             }
           
             return RedirectToPage("./Index");

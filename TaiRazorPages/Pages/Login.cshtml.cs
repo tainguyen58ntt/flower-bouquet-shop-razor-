@@ -38,11 +38,23 @@ namespace TaiRazorPages.Pages
             string password = _configuration["Admin:Password"];       
             if (ModelState.IsValid)
             {
-                if(InputLogin.Email.Equals(email) && InputLogin.Password.Equals(password))
+                if (InputLogin.Email.Equals(email) && InputLogin.Password.Equals(password))
                 {
-                    HttpContext.Session.SetString("AdminEmail", email);
+                    var url_admin = HttpContext.Session.GetString("ReturnUrl");
+                    //HttpContext.Session.Remove("ReturnUrl");
+                    //HttpContext.Session.SetString("AdminEmail", email);
 
+                    //return Redirect(url_admin);
+                    if (!string.IsNullOrEmpty(url_admin))
+                    {
+                        HttpContext.Session.Remove("ReturnUrl");
+                        HttpContext.Session.SetString("AdminEmail", email);
+
+                        return Redirect(url_admin);
+                    }
+                    HttpContext.Session.SetString("AdminEmail", email);
                     return RedirectToPage("/Admin/Ad_Customer/Index");
+
                 } 
                 Customer checkLogin =  CustomerRepository.CheckLogin(InputLogin.Email, InputLogin.Password);
             
