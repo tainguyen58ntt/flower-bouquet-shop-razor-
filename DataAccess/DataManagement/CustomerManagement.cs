@@ -41,9 +41,28 @@ namespace ClassLibrary1.DataAccess
             }
             return customers;
         }
-        //using singleton pattern
-        ///
-        public List<Customer> GetCustomers()
+		public bool CheckDuplicateEmail(string email)
+		{
+			List<Customer> customers;
+			try
+			{
+				var myStockDB = new FUFlowerBouquetManagementContext();
+				customers = myStockDB.Customers.Where(c => c.Email == email).ToList();
+                if(customers.Count == 0)
+                {
+                    return true;
+                }
+
+			}
+			catch (Exception ex)
+			{
+				throw new Exception(ex.Message);
+			}
+            return false; 
+		}
+		//using singleton pattern
+		///
+		public List<Customer> GetCustomers()
         {
             List<Customer> customers;
             try

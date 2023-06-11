@@ -21,7 +21,7 @@ namespace TaiRazorPages.Pages.Admin.Ad_Order
         public DateTime StartDate { get; set; }
 
         [BindProperty]
-        [Compare(nameof(StartDate), ErrorMessage = "End Date cannot be earlier than Start Date.")]
+        //[Compare(nameof(StartDate), ErrorMessage = "Hello End Date cannot be earlier than Start Date.")]
         public DateTime EndDate { get; set; }
 
 
@@ -37,14 +37,20 @@ namespace TaiRazorPages.Pages.Admin.Ad_Order
 
         public List<Order> Order { get;set; }
 
-        public async Task OnGetAsync()
+        public  IActionResult OnGetAsync()
         {
             //if (_context.Orders != null)
             //{
             //    Order = await _context.Orders
             //    .Include(o => o.Customer).ToListAsync();
-       
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+
+                HttpContext.Session.SetString("ReturnUrl", "/Admin/Ad_Order/Index");
+                return RedirectToPage("/Login");
+            }
             Order = oderRepository.GetOrders();
+            return Page();
 
         }
 
@@ -62,12 +68,13 @@ namespace TaiRazorPages.Pages.Admin.Ad_Order
             //}
             if (StartDate > EndDate)
             {
-                ModelState.AddModelError(string.Empty, "Start Date must be earlier than or equal to End Date.");
+                //ModelState.AddModelError(string.Empty, "Start Date must be earlier than or equal to End Date.");
+                ViewData["ErrorDateFill"] = "Start Date must be earlier than or equal to End Date";
                 return Page();
             }
           
             Order = oderRepository.GetOrdersAfterFill(StartDate, EndDate);
-            
+            Console.WriteLine(Order.Count);
             return Page();
             //return null;
         }

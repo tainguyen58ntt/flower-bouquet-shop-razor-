@@ -3,22 +3,19 @@
 @{
 	Layout = "_CustomerLayout";	
 }
-<h1>edit profile</h1>
+<h1>Edit profile</h1>
 @if (TempData.ContainsKey("UpdateSuccess"))
 {
 	<div class="alert alert-success">@TempData["UpdateSuccess"]</div>
 }
 @if (TempData.ContainsKey("Updatefail"))
 {
-	<div class="alert alert-success">@TempData["Updatefail"]</div>
+	<div class="alert alert-danger">@TempData["Updatefail"]</div>
 }
-
+	
 
 <form method="post">
-	<@*label asp-for="@Model.CustomerObject.CustomerId">ID:</label>
-			 <input type="number" asp-for="@Model.CustomerObject.CustomerId">
-			 <span asp-validation-for="@Model.CustomerObject.CustomerId"></span>*@
-	@*<br />*@
+
 
 	<label asp-for="@Model.CustomerObject.Email">Email:</label>
 	<input asp-for="@Model.CustomerObject.Email">
@@ -45,7 +42,7 @@
 	<span asp-validation-for="@Model.CustomerObject.Country"></span>
 	<br />
 	<label asp-for="@Model.CustomerObject.Birthday">Birth:</label>
-	<input asp-for="@Model.CustomerObject.Birthday">
+	<input asp-for="@Model.CustomerObject.Birthday" type="date" asp-format="{0:yyyy-MM-dd}">
 	<span asp-validation-for="@Model.CustomerObject.Birthday"></span>
 	<br />
 	<button type="submit" class="btn btn-primary">Update</button>

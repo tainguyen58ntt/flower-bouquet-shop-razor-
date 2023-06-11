@@ -15,14 +15,17 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
     {
         //private readonly Model.Models.FUFlowerBouquetManagementContext _context;
         private ICustomerRepository customerRepository;
-
+        
         public EditModel()
         {
             customerRepository = new CustomerRepository();
+        
         }
 
         [BindProperty]
         public Customer Customer { get; set; } = default!;
+        [BindProperty]
+        public string currentEmail { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -42,6 +45,8 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
 
                 //var customer =  await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
                 var customer = customerRepository.GetCustomerById(id);
+                currentEmail = customer.Email;  
+
                 if (customer == null)
                 {
                     return NotFound();
@@ -81,7 +86,37 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
             //        throw;
             //    }
             //}
+
+            string test = currentEmail;
+            await Console.Out.WriteLineAsync(test);
+            if (currentEmail != Customer.Email)
+            {
+               
+
+				//check duplicate email
+				bool checkEmailExists = customerRepository.CheckDuplicateEmail(Customer.Email);  // false: exists
+				if (checkEmailExists == false)
+				{
+
+					// Duplicate email exists
+					ViewData["ErrorEmail"] = "Email already exists. Please choose a different email.";
+					return Page();
+
+
+				}
+				else
+				{
+
+
+					customerRepository.Update(Customer);
+				}
+			}
+            else
+            {
             customerRepository.Update(Customer);
+
+            }
+
 
             return RedirectToPage("./Index");
         }

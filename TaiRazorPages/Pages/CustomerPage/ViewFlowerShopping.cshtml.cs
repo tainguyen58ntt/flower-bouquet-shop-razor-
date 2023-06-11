@@ -83,7 +83,7 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
             }
             CategoryList = categoryRepository.GetCategories();
 
-            FlowerBouquetObject = flowerRepository.GetFlowerBouquetsByStatus();
+            FlowerBouquetObject = flowerRepository.GetFlowerBouquetsByStatusAndStock();
 
             return Page();  
 

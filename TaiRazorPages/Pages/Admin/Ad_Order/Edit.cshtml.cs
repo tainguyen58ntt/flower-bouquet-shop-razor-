@@ -34,20 +34,33 @@ namespace TaiRazorPages.Pages.Admin.Ad_Order
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null)
+
+            if (HttpContext.Session.GetString("AdminEmail") == null)
             {
-                return NotFound();
+
+                HttpContext.Session.SetString("ReturnUrl", $"/Admin/Ad_Order/Edit?id={id}");
+                return RedirectToPage("/Login");
+            }
+            else
+            {
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                //var order =  await _context.Orders.FirstOrDefaultAsync(m => m.OrderId == id);
+                var order = orderRepository.GetObjectByOrId(id);
+                if (order == null)
+                {
+                    return NotFound();
+                }
+                Order = order;
+                ViewData["CustomerId"] = new SelectList(customerRepository.GetIenumCustomers(), "CustomerId", "City");
+                return Page();
             }
 
-            //var order =  await _context.Orders.FirstOrDefaultAsync(m => m.OrderId == id);
-            var order = orderRepository.GetObjectByOrId(id);
-            if (order == null)
-            {
-                return NotFound();
-            }
-            Order = order;
-           ViewData["CustomerId"] = new SelectList(customerRepository.GetIenumCustomers(), "CustomerId", "City");
-            return Page();
+
+          
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.

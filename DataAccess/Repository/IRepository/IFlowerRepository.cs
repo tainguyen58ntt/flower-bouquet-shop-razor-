@@ -26,6 +26,7 @@ namespace ClassLibrary1.Repository
 
 
         List<FlowerBouquet> GetFlowerBouquetsByStatus();
+        List<FlowerBouquet> GetFlowerBouquetsByStatusAndStock();
 
         List<FlowerBouquet> GetFlowerByCateIdAndStatus(int cateId);  
     }

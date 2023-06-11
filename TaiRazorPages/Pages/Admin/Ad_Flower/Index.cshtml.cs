@@ -47,7 +47,7 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
                 return RedirectToPage("/Login");
             }
             //cusiD = (int)HttpContext.Session.GetInt32("CustomerId");
-            FlowerBouquet = flowerRepository.GetFlowerBouquetsByStatus();
+            FlowerBouquet = flowerRepository.GetFlowerBouquets();
             return Page();
 
         }

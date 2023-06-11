@@ -29,23 +29,34 @@ namespace TaiRazorPages.Pages.Admin.Ad_Order
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            //var order = await _context.Orders.FirstOrDefaultAsync(m => m.OrderId == id);
-            var order = orderRepository.GetObjectByOrId(id);
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
 
-            if (order == null)
-            {
-                return NotFound();
+                HttpContext.Session.SetString("ReturnUrl", $"/Admin/Ad_Order/Delete?id={id}");
+                return RedirectToPage("/Login");
             }
-            else 
+            else
             {
-                Order = order;
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                //var order = await _context.Orders.FirstOrDefaultAsync(m => m.OrderId == id);
+                var order = orderRepository.GetObjectByOrId(id);
+
+                if (order == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    Order = order;
+                }
+                return Page();
             }
-            return Page();
+        
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)

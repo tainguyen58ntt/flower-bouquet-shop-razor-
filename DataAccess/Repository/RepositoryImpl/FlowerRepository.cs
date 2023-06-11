@@ -34,6 +34,11 @@ namespace ClassLibrary1.Repository
             return FlowerManagement.Instance.GetFlowerBouquetsByStatus();   
         }
 
+        public List<FlowerBouquet> GetFlowerBouquetsByStatusAndStock()
+        {
+            return FlowerManagement.Instance.GetFlowerBouquetsByStatusAndStock();
+        }
+
         public List<FlowerBouquet> GetFlowerByCateIdAndStatus(int cateId)
         {
             return FlowerManagement.Instance.GetFlowerByCateIdAndStatus(cateId); 

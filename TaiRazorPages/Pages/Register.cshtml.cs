@@ -27,7 +27,7 @@ namespace TaiRazorPages.Pages
             if(ModelState.IsValid)
             {
                 bool checkEmailExists = CustomerRepository.CheckDuplicateEmail(CustomerObject.Email);
-                if(!checkEmailExists)
+                if(checkEmailExists)
                 {
                     CustomerObject.CustomerId = Ultility.Class1.GenerateUniqueId();
                     CustomerRepository.InsertCustomer(CustomerObject);

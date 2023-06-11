@@ -5,13 +5,37 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Order</h1>
 @{
     Layout = "_AdminLayout";
 }
-<p>
+@*<p>
     <a asp-page="Create">Create New</a>
-</p>
+</p>*@
+@if (!string.IsNullOrEmpty(ViewData["ErrorDateFill"] as string))
+{
+    <div class="alert alert-danger">
+        @ViewData["ErrorDateFill"]
+    </div>
+}
+<form method="post" asp-page-handler="fill">
+
+    <div class="form-group">
+        <label for="@Model.StartDate">Start Date:</label>
+        <input type="date" class="form-control" asp-for="StartDate" min="2000-01-01" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label for="@Model.EndDate">End Date:</label>
+        <input type="date" class="form-control" asp-for="EndDate" min="2000-01-01" />
+        <span asp-validation-for="EndDate" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -49,35 +73,23 @@
                 @Html.DisplayFor(modelItem => item.OrderStatus)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer.City)
+                @Html.DisplayFor(modelItem => item.CustomerId)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.OrderId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.OrderId">Order Details</a> |
+               
+                        @* <a asp-page="./Edit" asp-route-id="@item.OrderId">Edit</a> |*@
+                    <a asp-page="/Admin/Ad_Order/Details" asp-route-id="@item.OrderId">Order Detail</a> |
+                        @*<a asp-page="./Delete" asp-route-id="@item.OrderId">Delete</a>*@
+               
                 <a asp-page="./Delete" asp-route-id="@item.OrderId">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-    hello
-<form method="post" asp-page-handler="fill">
+    
 
-    <div class="form-group">
-        <label for="@Model.StartDate">Start Date:</label>
-        <input type="date" class="form-control" asp-for="StartDate" />
-        <span asp-validation-for="StartDate" class="text-danger"></span>
-        
-    </div>
-
-    <div class="form-group">
-        <label for="@Model.EndDate">End Date:</label>
-        <input type="date" class="form-control" asp-for="EndDate" />
-        <span asp-validation-for="EndDate" class="text-danger"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
 @*<form asp-page-handler="view" method="post">
     <button class="btn btn-default">View</button>

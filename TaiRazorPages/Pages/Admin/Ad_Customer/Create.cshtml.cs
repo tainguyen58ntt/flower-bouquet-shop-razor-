@@ -52,19 +52,23 @@ namespace TaiRazorPages.Pages.Admin.Ad_Customer
           if (ModelState.IsValid )
             {
                 //check duplicate email
-                bool checkEmailExists = customerRepository.CheckDuplicateEmail(Customer.Email);
-                if(!checkEmailExists)
+                bool checkEmailExists = customerRepository.CheckDuplicateEmail(Customer.Email);  // false: exists
+                if(checkEmailExists == false)
                 {
-                  
-                    Customer.CustomerId = Ultility.Class1.GenerateUniqueId();
-                    customerRepository.InsertCustomer(Customer);
-                }
+
+					// Duplicate email exists
+					ViewData["ErrorEmail"] = "Email already exists. Please choose a different email.";
+					return Page();
+
+
+				}
                 else
                 {
-                    // Duplicate email exists
-                    ViewData["ErrorEmail"] = "Email already exists. Please choose a different email.";
-                    return Page();
-                }
+					
+
+					Customer.CustomerId = Ultility.Class1.GenerateUniqueId();
+					customerRepository.InsertCustomer(Customer);
+				}
             
             }
           

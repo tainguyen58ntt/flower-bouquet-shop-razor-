@@ -114,6 +114,21 @@ namespace ClassLibrary1.DataAccess
             }
             return flowerBouquets;
         }
+        public List<FlowerBouquet> GetFlowerBouquetsByStatusAndStock()
+        {
+            List<FlowerBouquet> flowerBouquets;
+            try
+            {
+                var myStockDB = new FUFlowerBouquetManagementContext();
+                flowerBouquets = myStockDB.FlowerBouquets.Where(fl => fl.FlowerBouquetStatus == 1 && fl.UnitsInStock > 0).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return flowerBouquets;
+        }
+
         public List<FlowerBouquet> GetFlowerBouquets()
         {
             List<FlowerBouquet> flowerBouquets;

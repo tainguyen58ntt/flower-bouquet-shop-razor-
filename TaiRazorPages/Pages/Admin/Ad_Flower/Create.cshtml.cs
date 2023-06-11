@@ -34,9 +34,20 @@ namespace TaiRazorPages.Pages.Admin.Ad_Flower
         }
         public IActionResult OnGet()
         {
-        ViewData["CategoryId"] = new SelectList(categoryRepository.GetIenumCategories(), "CategoryId", "CategoryName");
-        ViewData["SupplierId"] = new SelectList(supplierRepository.GetIenumSupplier(), "SupplierId", "SupplierId");
-            return Page();
+            if (HttpContext.Session.GetString("AdminEmail") == null)
+            {
+
+                HttpContext.Session.SetString("ReturnUrl", $"/Admin/Ad_Flower/Create");
+                return RedirectToPage("/Login");
+            }
+            else
+            {
+
+                ViewData["CategoryId"] = new SelectList(categoryRepository.GetIenumCategories(), "CategoryId", "CategoryName");
+                ViewData["SupplierId"] = new SelectList(supplierRepository.GetIenumSupplier(), "SupplierId", "SupplierId");
+                return Page();
+            }
+
         }
 
         [BindProperty]
